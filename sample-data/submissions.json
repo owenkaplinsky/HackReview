@@ -1,0 +1,62 @@
+[
+  {
+    "project_name": "AI-Powered Code Review Assistant",
+    "description": "An intelligent code review system that uses machine learning to automatically detect bugs, suggest improvements, and ensure code quality. The system integrates with popular development platforms and provides real-time feedback to developers.",
+    "demo_link": "https://demo.codeassistant.com",
+    "team_members": ["Alice Johnson", "Bob Smith", "Carol Davis"]
+  },
+  {
+    "project_name": "Smart Campus Navigation",
+    "description": "A mobile app that helps students navigate university campuses using AR technology. Features include real-time directions, event notifications, and accessibility support for students with disabilities.",
+    "demo_link": "https://campusnav.app/demo",
+    "team_members": ["David Wilson", "Emma Brown"]
+  },
+  {
+    "project_name": "EcoTrack - Carbon Footprint Tracker",
+    "description": "A comprehensive platform for tracking and reducing carbon footprints. Users can log daily activities, get personalized recommendations, and participate in community challenges to promote environmental sustainability.",
+    "demo_link": "https://ecotrack.green",
+    "team_members": ["Frank Miller", "Grace Lee", "Henry Taylor", "Ivy Chen"]
+  },
+  {
+    "project_name": "Virtual Reality Learning Platform",
+    "description": "An immersive VR platform for educational content delivery. Students can explore historical events, conduct virtual science experiments, and collaborate in 3D learning environments.",
+    "demo_link": "https://vrlearn.edu",
+    "team_members": ["Jack Anderson", "Kate Rodriguez"]
+  },
+  {
+    "project_name": "Blockchain Voting System",
+    "description": "A secure, transparent voting system built on blockchain technology. Ensures voter anonymity while providing verifiable results and preventing fraud in elections.",
+    "demo_link": "https://securevote.blockchain",
+    "team_members": ["Liam O'Connor", "Maya Patel", "Noah Kim"]
+  },
+  {
+    "project_name": "AI Health Assistant",
+    "description": "A personal health assistant that monitors vital signs, provides medication reminders, and connects users with healthcare professionals. Uses AI to detect potential health issues early.",
+    "demo_link": "https://aihealth.care",
+    "team_members": ["Olivia Garcia", "Paul Thompson"]
+  },
+  {
+    "project_name": "Smart Home Automation",
+    "description": "An IoT-based home automation system that learns user preferences and automatically adjusts lighting, temperature, and security settings. Includes voice control and mobile app integration.",
+    "demo_link": "https://smarthome.iot",
+    "team_members": ["Quinn Martinez", "Rachel White", "Sam Johnson"]
+  },
+  {
+    "project_name": "Language Learning with AI",
+    "description": "An AI-powered language learning platform that provides personalized lessons, pronunciation feedback, and conversation practice with native speakers through video calls.",
+    "demo_link": "https://ailang.learn",
+    "team_members": ["Tom Wilson", "Uma Singh"]
+  },
+  {
+    "project_name": "Autonomous Delivery Drone",
+    "description": "A drone delivery system for urban areas that can navigate complex environments, avoid obstacles, and deliver packages safely. Includes weather monitoring and route optimization.",
+    "demo_link": "https://drone.delivery",
+    "team_members": ["Victor Chen", "Wendy Davis", "Xavier Rodriguez"]
+  },
+  {
+    "project_name": "Mental Health Support Chatbot",
+    "description": "An empathetic AI chatbot that provides mental health support, crisis intervention, and connects users with professional counselors. Uses natural language processing to understand emotional context.",
+    "demo_link": "https://mentalhealth.ai",
+    "team_members": ["Yara Ali", "Zack Brown"]
+  }
+]

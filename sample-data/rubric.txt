@@ -1,0 +1,39 @@
+Hackathon Project Evaluation Rubric
+
+Innovation (25 points)
+- Novelty and creativity of the solution
+- Unique approach to solving the problem
+- Originality of ideas and implementation
+
+Technical Implementation (25 points)
+- Code quality and architecture
+- Use of appropriate technologies
+- Technical complexity and sophistication
+- Performance and scalability considerations
+
+User Experience (20 points)
+- Interface design and usability
+- User journey and interaction flow
+- Accessibility and inclusivity
+- Overall user satisfaction
+
+Problem Solving (20 points)
+- Clear problem identification
+- Effective solution approach
+- Real-world applicability
+- Impact potential
+
+Presentation (10 points)
+- Demo quality and clarity
+- Team communication
+- Project documentation
+- Pitch effectiveness
+
+Total: 100 points
+
+Additional Considerations:
+- Bonus points for social impact
+- Bonus points for sustainability focus
+- Bonus points for diversity and inclusion
+- Penalty for incomplete submissions
+- Penalty for technical issues during demo

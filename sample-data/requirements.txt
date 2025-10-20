@@ -1,0 +1,30 @@
+Hackathon Submission Requirements
+
+Basic Eligibility Criteria:
+1. Project must be original work created during the hackathon period
+2. Team size must be between 2-4 members
+3. Project description must be at least 500 words
+4. Must include a working demo or prototype
+5. Must provide a demo link or video presentation
+6. All team members must be registered participants
+7. Project must address one of the specified challenge themes
+8. Submission must be completed by the deadline
+
+Technical Requirements:
+- Code must be available in a public repository
+- Documentation must include setup instructions
+- Demo must be accessible online or via provided link
+- Project must be functional and demonstrate core features
+
+Presentation Requirements:
+- 5-minute demo presentation
+- Clear explanation of problem and solution
+- Live demonstration of key features
+- Q&A session with judges
+
+Disqualification Criteria:
+- Plagiarism or use of pre-existing solutions
+- Incomplete submissions
+- Violation of hackathon rules
+- Inappropriate content or behavior
+- Missing required components
