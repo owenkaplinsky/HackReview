@@ -22,6 +22,7 @@ const API_CONFIG = {
 };
 
 // Demo mode flag - set to true to use demo data instead of real APIs
+// NOTE: In production, set this to false to use real CrewAI APIs
 const DEMO_MODE = true;
 
 class ApiService {
@@ -95,8 +96,8 @@ class ApiService {
       // Simulate API delay
       await new Promise((resolve) => setTimeout(resolve, 800));
 
-      // Demo eligibility logic
-      const isEligible = this.checkDemoEligibility(submission);
+      // Demo eligibility logic - respect the requirements parameter
+      const isEligible = this.checkDemoEligibility(submission, requirements);
 
       return {
         success: true,
@@ -104,7 +105,7 @@ class ApiService {
           eligible: isEligible,
           reason: isEligible
             ? "Submission meets all eligibility requirements"
-            : this.getDemoEligibilityReason(submission),
+            : this.getDemoEligibilityReason(submission, requirements),
         },
       };
     }
@@ -159,28 +160,50 @@ class ApiService {
   }
 
   // Demo helper methods
-  private checkDemoEligibility(submission: any): boolean {
+  private checkDemoEligibility(submission: any, requirements: string): boolean {
+    // If no requirements are provided, make all submissions eligible
+    if (
+      !requirements ||
+      requirements.trim().toLowerCase() === "none" ||
+      requirements.trim() === ""
+    ) {
+      return true;
+    }
+
     const description = submission.description || "";
     const teamMembers = submission.team_members || submission.teamMembers || [];
     const demoLink = submission.demo_link || submission.demoLink || "";
 
+    // For demo purposes, use more reasonable criteria while still filtering out obviously incomplete submissions
     return (
-      description.length >= 500 &&
+      description.length >= 200 && // Reduced from 500 to 200 for demo
       teamMembers.length >= 2 &&
       teamMembers.length <= 4 &&
       demoLink.length > 0
     );
   }
 
-  private getDemoEligibilityReason(submission: any): string {
+  private getDemoEligibilityReason(
+    submission: any,
+    requirements: string
+  ): string {
+    // If no requirements are provided, all submissions should be eligible
+    if (
+      !requirements ||
+      requirements.trim().toLowerCase() === "none" ||
+      requirements.trim() === ""
+    ) {
+      return "No specific requirements provided - all submissions are eligible";
+    }
+
     const reasons = [];
     const description = submission.description || "";
     const teamMembers = submission.team_members || submission.teamMembers || [];
     const demoLink = submission.demo_link || submission.demoLink || "";
 
-    if (description.length < 500) {
+    if (description.length < 200) {
       reasons.push(
-        "Project description is too brief (less than 500 words required)"
+        "Project description is too brief (less than 200 words required for demo)"
       );
     }
     if (teamMembers.length < 2) {

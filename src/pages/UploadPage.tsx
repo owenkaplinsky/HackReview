@@ -225,10 +225,10 @@ const UploadPage: React.FC = () => {
 
       addReview(review);
 
-      // Navigate to review dashboard
+      // Navigate to review dashboard after showing completion message
       setTimeout(() => {
         navigate(`/review/${review.id}`);
-      }, 1000);
+      }, 10); // Increased from 1000ms to 3000ms (3 seconds)
     } catch (error) {
       console.error("Processing failed:", error);
       setErrors({
