@@ -245,32 +245,6 @@ const ReviewDashboard: React.FC = () => {
           </>
         )}
       </div>
-
-      {/* Stats Footer */}
-      <div className="relative z-10 bg-glass-gradient backdrop-blur-md border-t border-white/10 mt-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="text-center glass-card">
-              <div className="text-2xl font-bold bg-purple-gradient bg-clip-text text-transparent">
-                {submissionsByCategory.promising.length}
-              </div>
-              <div className="text-sm text-gray-300">Promising Submissions</div>
-            </div>
-            <div className="text-center glass-card">
-              <div className="text-2xl font-bold bg-purple-gradient bg-clip-text text-transparent">
-                {submissionsByCategory.filtered.length}
-              </div>
-              <div className="text-sm text-gray-300">Filtered Out</div>
-            </div>
-            <div className="text-center glass-card">
-              <div className="text-2xl font-bold bg-red-500 bg-clip-text text-transparent">
-                {submissionsByCategory.ineligible.length}
-              </div>
-              <div className="text-sm text-gray-300">Ineligible</div>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   );
 };

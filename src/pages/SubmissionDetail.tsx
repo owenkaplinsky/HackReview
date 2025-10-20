@@ -66,13 +66,13 @@ const SubmissionDetail: React.FC = () => {
   const getCategoryColor = (category: Submission["category"]) => {
     switch (category) {
       case "ineligible":
-        return "bg-danger-100 text-danger-800 border-danger-200";
+        return "bg-red-500/20 text-red-300 border-red-500/30";
       case "filtered":
-        return "bg-warning-100 text-warning-800 border-warning-200";
+        return "bg-purple-500/20 text-purple-300 border-purple-500/30";
       case "promising":
-        return "bg-success-100 text-success-800 border-success-200";
+        return "bg-purple-500/20 text-purple-300 border-purple-500/30";
       default:
-        return "bg-gray-100 text-gray-800 border-gray-200";
+        return "bg-white/10 text-gray-300 border-white/20";
     }
   };
 
@@ -104,12 +104,20 @@ const SubmissionDetail: React.FC = () => {
 
   if (!currentReview || !submission) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-2xl font-bold text-gray-900 mb-4">
+      <div className="min-h-screen bg-dark-950 flex items-center justify-center relative overflow-hidden">
+        {/* Animated background elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500/20 rounded-full blur-3xl animate-pulse-slow"></div>
+          <div
+            className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-600/20 rounded-full blur-3xl animate-pulse-slow"
+            style={{ animationDelay: "1s" }}
+          ></div>
+        </div>
+        <div className="text-center relative z-10">
+          <h1 className="text-2xl font-bold text-white mb-4">
             Submission Not Found
           </h1>
-          <p className="text-gray-600 mb-6">
+          <p className="text-gray-300 mb-6">
             The submission you're looking for doesn't exist.
           </p>
           <Link to={`/review/${hackathonId}`} className="btn-primary">
@@ -121,9 +129,18 @@ const SubmissionDetail: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-dark-950 relative overflow-hidden">
+      {/* Animated background elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500/20 rounded-full blur-3xl animate-pulse-slow"></div>
+        <div
+          className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-600/20 rounded-full blur-3xl animate-pulse-slow"
+          style={{ animationDelay: "1s" }}
+        ></div>
+      </div>
+
       {/* Header */}
-      <div className="bg-white shadow-sm">
+      <div className="relative z-10 bg-glass-gradient backdrop-blur-md border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
@@ -131,10 +148,10 @@ const SubmissionDetail: React.FC = () => {
                 ← Back to Dashboard
               </Link>
               <div>
-                <h1 className="text-2xl font-bold text-gray-900">
+                <h1 className="text-2xl font-bold text-white">
                   {submission.projectName}
                 </h1>
-                <p className="text-gray-600">{currentReview.name}</p>
+                <p className="text-gray-300">{currentReview.name}</p>
               </div>
             </div>
 
@@ -143,8 +160,8 @@ const SubmissionDetail: React.FC = () => {
                 onClick={handleToggleFavorite}
                 className={`p-2 rounded-lg transition-colors ${
                   submission.isFavorite
-                    ? "text-yellow-500 bg-yellow-50"
-                    : "text-gray-400 hover:text-yellow-500 hover:bg-yellow-50"
+                    ? "text-yellow-400 bg-yellow-500/20"
+                    : "text-gray-400 hover:text-yellow-400 hover:bg-yellow-500/20"
                 }`}
               >
                 <span className="text-2xl">⭐</span>
@@ -161,7 +178,7 @@ const SubmissionDetail: React.FC = () => {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Main Content */}
           <div className="lg:col-span-2 space-y-8">
@@ -173,11 +190,11 @@ const SubmissionDetail: React.FC = () => {
                     {getCategoryIcon(submission.category)}
                   </span>
                   <div>
-                    <h2 className="text-xl font-semibold text-gray-900">
+                    <h2 className="text-xl font-semibold text-white">
                       Project Information
                     </h2>
                     <span
-                      className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border ${getCategoryColor(
+                      className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border backdrop-blur-sm ${getCategoryColor(
                         submission.category
                       )}`}
                     >
@@ -200,10 +217,10 @@ const SubmissionDetail: React.FC = () => {
 
               <div className="space-y-4">
                 <div>
-                  <h3 className="text-sm font-medium text-gray-700 mb-2">
+                  <h3 className="text-sm font-medium text-gray-300 mb-2">
                     Description
                   </h3>
-                  <p className="text-gray-900 leading-relaxed">
+                  <p className="text-white leading-relaxed">
                     {submission.description}
                   </p>
                 </div>
@@ -211,14 +228,14 @@ const SubmissionDetail: React.FC = () => {
                 {submission.teamMembers &&
                   submission.teamMembers.length > 0 && (
                     <div>
-                      <h3 className="text-sm font-medium text-gray-700 mb-2">
+                      <h3 className="text-sm font-medium text-gray-300 mb-2">
                         Team Members
                       </h3>
                       <div className="flex flex-wrap gap-2">
                         {submission.teamMembers.map((member, index) => (
                           <span
                             key={index}
-                            className="px-3 py-1 bg-primary-100 text-primary-800 text-sm rounded-full"
+                            className="px-3 py-1 bg-purple-500/20 text-purple-300 text-sm rounded-full border border-purple-500/30 backdrop-blur-sm"
                           >
                             {member}
                           </span>
@@ -229,11 +246,11 @@ const SubmissionDetail: React.FC = () => {
 
                 {submission.category === "ineligible" &&
                   submission.eligibilityReason && (
-                    <div className="bg-danger-50 border border-danger-200 rounded-lg p-4">
-                      <h3 className="text-sm font-medium text-danger-800 mb-2">
+                    <div className="bg-red-500/20 border border-red-500/30 rounded-lg p-4 backdrop-blur-sm">
+                      <h3 className="text-sm font-medium text-red-300 mb-2">
                         Ineligibility Reason
                       </h3>
-                      <p className="text-danger-700">
+                      <p className="text-red-200">
                         {submission.eligibilityReason}
                       </p>
                     </div>
@@ -244,14 +261,14 @@ const SubmissionDetail: React.FC = () => {
             {/* AI Evaluation */}
             {submission.category !== "ineligible" && (
               <div className="card">
-                <h2 className="text-xl font-semibold text-gray-900 mb-6">
+                <h2 className="text-xl font-semibold text-white mb-6">
                   AI Evaluation
                 </h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   {/* Overall Score */}
                   <div className="text-center">
-                    <h3 className="text-lg font-medium text-gray-700 mb-4">
+                    <h3 className="text-lg font-medium text-gray-300 mb-4">
                       Overall Score
                     </h3>
                     <ScoreDisplay
@@ -276,7 +293,7 @@ const SubmissionDetail: React.FC = () => {
             {/* Debate Section */}
             {submission.category === "promising" && (
               <div className="card">
-                <h2 className="text-xl font-semibold text-gray-900 mb-6">
+                <h2 className="text-xl font-semibold text-white mb-6">
                   AI Debate Analysis
                 </h2>
                 <DebateView
@@ -291,7 +308,7 @@ const SubmissionDetail: React.FC = () => {
           <div className="space-y-6">
             {/* Navigation */}
             <div className="card">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">
+              <h3 className="text-lg font-semibold text-white mb-4">
                 Navigation
               </h3>
               <div className="flex justify-between">
@@ -324,13 +341,13 @@ const SubmissionDetail: React.FC = () => {
 
             {/* Organizer Actions */}
             <div className="card">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">
+              <h3 className="text-lg font-semibold text-white mb-4">
                 Organizer Actions
               </h3>
 
               <div className="space-y-4">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-medium text-gray-300 mb-2">
                     Notes
                   </label>
                   <textarea
@@ -347,7 +364,7 @@ const SubmissionDetail: React.FC = () => {
                   </button>
                 </div>
 
-                <div className="pt-4 border-t border-gray-200">
+                <div className="pt-4 border-t border-white/20">
                   <button className="btn-secondary w-full mb-2">
                     Export as PDF
                   </button>
@@ -360,33 +377,33 @@ const SubmissionDetail: React.FC = () => {
 
             {/* Quick Stats */}
             <div className="card">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">
+              <h3 className="text-lg font-semibold text-white mb-4">
                 Quick Stats
               </h3>
               <div className="space-y-3">
                 <div className="flex justify-between">
-                  <span className="text-gray-600">Category:</span>
-                  <span className="font-medium">
+                  <span className="text-gray-300">Category:</span>
+                  <span className="font-medium text-white">
                     {getCategoryLabel(submission.category)}
                   </span>
                 </div>
                 {submission.category !== "ineligible" && (
                   <div className="flex justify-between">
-                    <span className="text-gray-600">Score:</span>
-                    <span className="font-medium">
+                    <span className="text-gray-300">Score:</span>
+                    <span className="font-medium text-white">
                       {submission.overallScore}/100
                     </span>
                   </div>
                 )}
                 <div className="flex justify-between">
-                  <span className="text-gray-600">Favorite:</span>
-                  <span className="font-medium">
+                  <span className="text-gray-300">Favorite:</span>
+                  <span className="font-medium text-white">
                     {submission.isFavorite ? "Yes" : "No"}
                   </span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-gray-600">Position:</span>
-                  <span className="font-medium">
+                  <span className="text-gray-300">Position:</span>
+                  <span className="font-medium text-white">
                     {submissionIndex + 1} of {currentReview.submissions.length}
                   </span>
                 </div>
@@ -399,18 +416,21 @@ const SubmissionDetail: React.FC = () => {
       {/* Category Change Modal */}
       {showCategoryModal && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-white rounded-lg p-6 max-w-md w-full mx-4">
-            <h3 className="text-lg font-semibold text-gray-900 mb-4">
+          <div className="glass-card p-6 max-w-md w-full mx-4">
+            <h3 className="text-lg font-semibold text-white mb-4">
               Move to Category
             </h3>
-            <p className="text-gray-600 mb-4">
+            <p className="text-gray-300 mb-4">
               Select a new category for this submission:
             </p>
 
             <div className="space-y-3 mb-6">
               {(["promising", "filtered", "ineligible"] as const).map(
                 (category) => (
-                  <label key={category} className="flex items-center">
+                  <label
+                    key={category}
+                    className="flex items-center text-white"
+                  >
                     <input
                       type="radio"
                       name="category"
@@ -419,7 +439,7 @@ const SubmissionDetail: React.FC = () => {
                       onChange={(e) =>
                         setNewCategory(e.target.value as Submission["category"])
                       }
-                      className="mr-3"
+                      className="mr-3 text-purple-500"
                     />
                     <span className="flex items-center">
                       <span className="mr-2">{getCategoryIcon(category)}</span>

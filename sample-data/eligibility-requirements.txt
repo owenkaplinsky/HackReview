@@ -1,0 +1,39 @@
+HACKATHON ELIGIBILITY REQUIREMENTS
+
+MANDATORY REQUIREMENTS:
+1. Project Description: Must be at least 500 words describing the project, its purpose, and implementation
+2. Demo Link: Must provide a working demo link or video demonstration
+3. Team Size: Must have between 2-4 team members (inclusive)
+4. Technology Stack: Must use at least 2 different technologies or frameworks
+5. Submission Deadline: Must be submitted before the final deadline
+6. GitHub Repository: Must include a public GitHub repository link
+7. Theme Alignment: Must address one of the hackathon themes (AI/ML, Sustainability, Healthcare, Education, Social Impact)
+
+TECHNICAL REQUIREMENTS:
+- Code must be original and not plagiarized
+- Project must be functional and demonstrate core features
+- Must include proper documentation and README file
+- Must be deployable or runnable in a standard environment
+
+CONTENT REQUIREMENTS:
+- Project description must be clear and comprehensive
+- Must explain the problem being solved
+- Must describe the solution approach
+- Must include information about the technology stack used
+- Must provide instructions for running the project
+
+DISQUALIFICATION CRITERIA:
+- Projects with offensive, inappropriate, or harmful content
+- Projects that violate intellectual property rights
+- Projects that don't meet minimum technical requirements
+- Teams with more than 4 members
+- Submissions after the deadline
+- Missing required documentation or demo links
+
+EVALUATION PROCESS:
+1. Initial eligibility check based on requirements
+2. Technical review of code quality and functionality
+3. Assessment of innovation and creativity
+4. Evaluation of user experience and design
+5. Analysis of problem-solving approach and impact
+6. Review of presentation and documentation quality

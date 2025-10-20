@@ -14,30 +14,30 @@ const DebateView: React.FC<DebateViewProps> = ({
   return (
     <div className={`grid grid-cols-1 lg:grid-cols-2 gap-6 ${className}`}>
       {/* Devil's Advocate */}
-      <div className="bg-danger-50 border border-danger-200 rounded-lg p-6">
+      <div className="bg-red-500/20 border border-red-500/30 rounded-lg p-6 backdrop-blur-sm">
         <div className="flex items-center mb-4">
           <span className="text-2xl mr-3">😈</span>
-          <h3 className="text-lg font-semibold text-danger-800">
+          <h3 className="text-lg font-semibold text-red-300">
             Devil's Advocate
           </h3>
         </div>
         <div className="prose prose-sm max-w-none">
-          <p className="text-danger-700 leading-relaxed whitespace-pre-wrap">
+          <p className="text-red-200 leading-relaxed whitespace-pre-wrap">
             {devilsAdvocate}
           </p>
         </div>
       </div>
 
       {/* Praise Agent */}
-      <div className="bg-success-50 border border-success-200 rounded-lg p-6">
+      <div className="bg-purple-500/20 border border-purple-500/30 rounded-lg p-6 backdrop-blur-sm">
         <div className="flex items-center mb-4">
           <span className="text-2xl mr-3">🌟</span>
-          <h3 className="text-lg font-semibold text-success-800">
+          <h3 className="text-lg font-semibold text-purple-300">
             Praise Agent
           </h3>
         </div>
         <div className="prose prose-sm max-w-none">
-          <p className="text-success-700 leading-relaxed whitespace-pre-wrap">
+          <p className="text-purple-200 leading-relaxed whitespace-pre-wrap">
             {praiseAgent}
           </p>
         </div>

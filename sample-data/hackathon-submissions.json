@@ -1,0 +1,174 @@
+[
+  {
+    "project_name": "AI-Powered Code Review Assistant",
+    "name": "AI-Powered Code Review Assistant",
+    "description": "An intelligent code review system that uses machine learning to automatically detect bugs, suggest improvements, and ensure code quality. The system analyzes code patterns, identifies potential security vulnerabilities, and provides detailed feedback to developers. It integrates with popular development environments and supports multiple programming languages including Python, JavaScript, Java, and C++.",
+    "demo_link": "https://demo.codeassistant.com",
+    "demoLink": "https://demo.codeassistant.com",
+    "team_members": ["Alice Johnson", "Bob Smith", "Carol Davis"],
+    "teamMembers": ["Alice Johnson", "Bob Smith", "Carol Davis"],
+    "github_repo": "https://github.com/alice/code-review-ai",
+    "video_demo": "https://youtube.com/watch?v=demo1",
+    "tech_stack": ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL"],
+    "category": "Web Development",
+    "submission_date": "2024-01-15T10:30:00Z"
+  },
+  {
+    "project_name": "Smart Campus Navigation",
+    "name": "Smart Campus Navigation",
+    "description": "A mobile app that helps students navigate university campuses using AR technology with real-time directions and accessibility support. The app uses computer vision to recognize campus landmarks and provides turn-by-turn navigation with voice guidance. It includes features for wheelchair accessibility, visual impairment support, and real-time updates about campus events and closures.",
+    "demo_link": "https://campusnav.app/demo",
+    "demoLink": "https://campusnav.app/demo",
+    "team_members": ["David Wilson", "Emma Brown"],
+    "teamMembers": ["David Wilson", "Emma Brown"],
+    "github_repo": "https://github.com/david/smart-campus-nav",
+    "video_demo": "https://youtube.com/watch?v=demo2",
+    "tech_stack": ["React Native", "ARCore", "Firebase", "Google Maps API"],
+    "category": "Mobile Development",
+    "submission_date": "2024-01-15T14:20:00Z"
+  },
+  {
+    "project_name": "EcoTrack - Carbon Footprint Tracker",
+    "name": "EcoTrack - Carbon Footprint Tracker",
+    "description": "A comprehensive platform for tracking and reducing carbon footprints with personalized recommendations and community challenges. Users can log their daily activities, transportation choices, and consumption habits. The app provides detailed analytics, sets achievable goals, and connects users with local environmental initiatives. It includes gamification elements to encourage sustainable behavior.",
+    "demo_link": "https://ecotrack.green",
+    "demoLink": "https://ecotrack.green",
+    "team_members": ["Frank Miller", "Grace Lee", "Henry Taylor", "Ivy Chen"],
+    "teamMembers": ["Frank Miller", "Grace Lee", "Henry Taylor", "Ivy Chen"],
+    "github_repo": "https://github.com/frank/ecotrack",
+    "video_demo": "https://youtube.com/watch?v=demo3",
+    "tech_stack": ["Vue.js", "Node.js", "MongoDB", "Chart.js", "Stripe API"],
+    "category": "Sustainability",
+    "submission_date": "2024-01-15T16:45:00Z"
+  },
+  {
+    "project_name": "Blockchain Voting System",
+    "name": "Blockchain Voting System",
+    "description": "A secure, transparent voting system built on blockchain technology ensuring voter anonymity while providing verifiable results. The system uses smart contracts to manage the voting process and cryptographic proofs to ensure vote integrity. It supports multiple voting methods including ranked choice and approval voting.",
+    "demo_link": "https://securevote.blockchain",
+    "demoLink": "https://securevote.blockchain",
+    "team_members": ["Liam O'Connor", "Maya Patel", "Noah Kim"],
+    "teamMembers": ["Liam O'Connor", "Maya Patel", "Noah Kim"],
+    "github_repo": "https://github.com/liam/blockchain-voting",
+    "video_demo": "https://youtube.com/watch?v=demo4",
+    "tech_stack": ["Solidity", "Web3.js", "React", "Ethereum", "MetaMask"],
+    "category": "Blockchain",
+    "submission_date": "2024-01-15T18:10:00Z"
+  },
+  {
+    "project_name": "MediConnect - Telemedicine Platform",
+    "name": "MediConnect - Telemedicine Platform",
+    "description": "A comprehensive telemedicine platform that connects patients with healthcare providers through secure video consultations. The platform includes features for appointment scheduling, prescription management, medical record sharing, and real-time health monitoring. It supports multiple languages and includes accessibility features for patients with disabilities.",
+    "demo_link": "https://mediconnect.health",
+    "demoLink": "https://mediconnect.health",
+    "team_members": [
+      "Sarah Ahmed",
+      "Michael Chen",
+      "Priya Sharma",
+      "Alex Rodriguez"
+    ],
+    "teamMembers": [
+      "Sarah Ahmed",
+      "Michael Chen",
+      "Priya Sharma",
+      "Alex Rodriguez"
+    ],
+    "github_repo": "https://github.com/sarah/mediconnect",
+    "video_demo": "https://youtube.com/watch?v=demo5",
+    "tech_stack": ["React", "Node.js", "WebRTC", "PostgreSQL", "AWS", "Twilio"],
+    "category": "Healthcare",
+    "submission_date": "2024-01-15T20:30:00Z"
+  },
+  {
+    "project_name": "EduLearn - AI Tutoring System",
+    "name": "EduLearn - AI Tutoring System",
+    "description": "An AI-powered tutoring system that provides personalized learning experiences for students. The system adapts to individual learning styles and paces, providing customized content and practice problems. It includes natural language processing for answering student questions and computer vision for analyzing handwritten work.",
+    "demo_link": "https://edulearn.ai",
+    "demoLink": "https://edulearn.ai",
+    "team_members": ["Jennifer Liu", "Ahmed Hassan"],
+    "teamMembers": ["Jennifer Liu", "Ahmed Hassan"],
+    "github_repo": "https://github.com/jennifer/edulearn",
+    "video_demo": "https://youtube.com/watch?v=demo6",
+    "tech_stack": ["Python", "OpenAI API", "Flask", "TensorFlow", "OpenCV"],
+    "category": "Education",
+    "submission_date": "2024-01-15T22:15:00Z"
+  },
+  {
+    "project_name": "FoodWaste Tracker",
+    "name": "FoodWaste Tracker",
+    "description": "A mobile application that helps restaurants and households track and reduce food waste. Users can log food items, track expiration dates, and receive suggestions for recipes using ingredients that are about to expire. The app connects with local food banks to facilitate donations of excess food.",
+    "demo_link": "https://foodwaste.app",
+    "demoLink": "https://foodwaste.app",
+    "team_members": ["Maria Garcia", "Tom Wilson", "Lisa Park"],
+    "teamMembers": ["Maria Garcia", "Tom Wilson", "Lisa Park"],
+    "github_repo": "https://github.com/maria/foodwaste-tracker",
+    "video_demo": "https://youtube.com/watch?v=demo7",
+    "tech_stack": ["Flutter", "Firebase", "Google Vision API", "Maps API"],
+    "category": "Sustainability",
+    "submission_date": "2024-01-16T09:00:00Z"
+  },
+  {
+    "project_name": "VR Fitness Trainer",
+    "name": "VR Fitness Trainer",
+    "description": "A virtual reality fitness application that provides immersive workout experiences. Users can choose from various environments and workout routines, with real-time form correction and progress tracking. The app includes multiplayer features for group workouts and social challenges.",
+    "demo_link": "https://vrfitness.workout",
+    "demoLink": "https://vrfitness.workout",
+    "team_members": [
+      "Kevin Zhang",
+      "Rachel Green",
+      "Marcus Johnson",
+      "Sofia Martinez"
+    ],
+    "teamMembers": [
+      "Kevin Zhang",
+      "Rachel Green",
+      "Marcus Johnson",
+      "Sofia Martinez"
+    ],
+    "github_repo": "https://github.com/kevin/vr-fitness",
+    "video_demo": "https://youtube.com/watch?v=demo8",
+    "tech_stack": ["Unity", "C#", "Oculus SDK", "Blender", "Firebase"],
+    "category": "VR/AR",
+    "submission_date": "2024-01-16T11:30:00Z"
+  },
+  {
+    "project_name": "Quick App",
+    "name": "Quick App",
+    "description": "A simple todo app.",
+    "demo_link": "",
+    "demoLink": "",
+    "team_members": ["John Doe"],
+    "teamMembers": ["John Doe"],
+    "github_repo": "",
+    "video_demo": "",
+    "tech_stack": ["HTML", "CSS"],
+    "category": "Web Development",
+    "submission_date": "2024-01-16T13:45:00Z"
+  },
+  {
+    "project_name": "Incomplete Project",
+    "name": "Incomplete Project",
+    "description": "This is an incomplete submission with missing required information and no demo link provided. The team has not provided sufficient documentation or implementation details.",
+    "demo_link": "",
+    "demoLink": "",
+    "team_members": [
+      "Jane Smith",
+      "Bob Johnson",
+      "Alice Brown",
+      "Charlie Wilson",
+      "Diana Lee"
+    ],
+    "teamMembers": [
+      "Jane Smith",
+      "Bob Johnson",
+      "Alice Brown",
+      "Charlie Wilson",
+      "Diana Lee"
+    ],
+    "github_repo": "",
+    "video_demo": "",
+    "tech_stack": [],
+    "category": "Other",
+    "submission_date": "2024-01-16T15:20:00Z"
+  }
+]

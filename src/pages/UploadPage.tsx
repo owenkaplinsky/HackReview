@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import { useStore } from "../store/useStore";
-// import { apiService } from "../services/api"; // Available for future use
+import { apiService } from "../services/api";
 import { HackathonReview, Submission } from "../types";
 import FileUploader from "../components/FileUploader";
 import LoadingSpinner from "../components/LoadingSpinner";
@@ -77,23 +77,22 @@ const UploadPage: React.FC = () => {
   const validateForm = () => {
     const newErrors: Record<string, string> = {};
 
-    // For demo purposes, only require hackathon name
     if (!formData.hackathonName.trim()) {
       newErrors.hackathonName = "Hackathon name is required";
     }
 
-    // Make other fields optional for demo
-    // if (!formData.rubric.trim()) {
-    //   newErrors.rubric = "Rubric is required";
-    // }
+    // For demo mode, make other fields optional
+    if (!formData.rubric.trim()) {
+      newErrors.rubric = "Rubric is required";
+    }
 
-    // if (!formData.requirements.trim()) {
-    //   newErrors.requirements = "Eligibility requirements are required";
-    // }
+    if (!formData.requirements.trim()) {
+      newErrors.requirements = "Eligibility requirements are required";
+    }
 
-    // if (formData.submissions.length === 0) {
-    //   newErrors.submissions = "At least one submission is required";
-    // }
+    if (formData.submissions.length === 0) {
+      newErrors.submissions = "At least one submission is required";
+    }
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -105,130 +104,108 @@ const UploadPage: React.FC = () => {
     setIsProcessing(true);
 
     try {
-      // Demo mode - create sample data instead of calling APIs
+      // Step 1: Generate Schema from rubric
       setProcessingStatus({
         stage: "generating-schema",
-        progress: 20,
+        progress: 10,
         message: "Generating evaluation schema from rubric...",
       });
 
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      const schemaResponse = await apiService.generateSchema(formData.rubric);
+      if (!schemaResponse.success || !schemaResponse.data) {
+        throw new Error(schemaResponse.error || "Failed to generate schema");
+      }
 
-      setProcessingStatus({
-        stage: "checking-eligibility",
-        progress: 50,
-        message: "Checking submission eligibility...",
-      });
+      // Step 2: Process each submission
+      const processedSubmissions: Submission[] = [];
+      const totalSubmissions = formData.submissions.length;
 
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      for (let i = 0; i < totalSubmissions; i++) {
+        const submission = formData.submissions[i];
 
-      setProcessingStatus({
-        stage: "grading-projects",
-        progress: 80,
-        message: "Grading projects with AI...",
-      });
+        // Update progress
+        const baseProgress = 20 + (i / totalSubmissions) * 60;
+        setProcessingStatus({
+          stage: "checking-eligibility",
+          progress: baseProgress,
+          message: `Processing submission ${i + 1} of ${totalSubmissions}...`,
+        });
 
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+        // Check eligibility
+        const eligibilityResponse = await apiService.checkEligibility(
+          formData.requirements,
+          submission
+        );
 
-      setProcessingStatus({
-        stage: "running-debate",
-        progress: 95,
-        message: "Running debate agents for analysis...",
-      });
+        if (!eligibilityResponse.success || !eligibilityResponse.data) {
+          console.error("Eligibility check failed for submission:", submission);
+          continue;
+        }
 
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+        const { eligible, reason } = eligibilityResponse.data;
 
-      // Create demo submissions
-      const demoSubmissions: Submission[] = [
-        {
-          id: "submission-1",
-          projectName: "AI-Powered Code Review Assistant",
-          description:
-            "An intelligent code review system that uses machine learning to automatically detect bugs, suggest improvements, and ensure code quality.",
-          demoLink: "https://demo.codeassistant.com",
-          teamMembers: ["Alice Johnson", "Bob Smith", "Carol Davis"],
-          category: "promising",
-          overallScore: 87,
-          rubricScores: {
-            innovation: 9,
-            technicalImplementation: 8,
-            userExperience: 9,
-            problemSolving: 8,
-            presentation: 7,
-          },
-          devilsAdvocate:
-            "While the concept is solid, the technical implementation seems to rely heavily on existing ML libraries without much innovation. The user interface appears basic and may not scale well for enterprise use. The team's presentation lacked depth in discussing potential security concerns with AI-powered code analysis.",
-          praiseAgent:
-            "This project demonstrates excellent understanding of real-world developer pain points. The AI integration is well-thought-out and the code quality detection features are innovative. The team shows strong technical skills and the demo was polished and functional. The problem-solving approach is comprehensive and addresses a genuine need in the development community.",
+        if (!eligible) {
+          processedSubmissions.push({
+            id: `submission-${i}`,
+            projectName:
+              submission.project_name || submission.name || `Project ${i + 1}`,
+            description: submission.description || "",
+            demoLink: submission.demo_link || submission.demoLink,
+            teamMembers: submission.team_members || submission.teamMembers,
+            category: "ineligible",
+            eligibilityReason: reason,
+            overallScore: 0,
+            rubricScores: {},
+            devilsAdvocate: "",
+            praiseAgent: "",
+            isFavorite: false,
+          });
+          continue;
+        }
+
+        // Grade project
+        setProcessingStatus({
+          stage: "grading-projects",
+          progress: baseProgress + 10,
+          message: `Grading submission ${i + 1} of ${totalSubmissions}...`,
+        });
+
+        const gradeResponse = await apiService.gradeProject(
+          formData.rubric,
+          schemaResponse.data.schema,
+          submission
+        );
+
+        if (!gradeResponse.success || !gradeResponse.data) {
+          console.error("Grading failed for submission:", submission);
+          continue;
+        }
+
+        const {
+          scores,
+          overallScore,
+          devilsAdvocate,
+          praiseAgent,
+          recommendation,
+        } = gradeResponse.data;
+
+        processedSubmissions.push({
+          id: `submission-${i}`,
+          projectName:
+            submission.project_name || submission.name || `Project ${i + 1}`,
+          description: submission.description || "",
+          demoLink: submission.demo_link || submission.demoLink,
+          teamMembers: submission.team_members || submission.teamMembers,
+          category: recommendation,
+          overallScore,
+          rubricScores: scores,
+          devilsAdvocate,
+          praiseAgent,
           isFavorite: false,
-        },
-        {
-          id: "submission-2",
-          projectName: "Smart Campus Navigation",
-          description:
-            "A mobile app that helps students navigate university campuses using AR technology with real-time directions and accessibility support.",
-          demoLink: "https://campusnav.app/demo",
-          teamMembers: ["David Wilson", "Emma Brown"],
-          category: "promising",
-          overallScore: 82,
-          rubricScores: {
-            innovation: 8,
-            technicalImplementation: 7,
-            userExperience: 9,
-            problemSolving: 8,
-            presentation: 8,
-          },
-          devilsAdvocate:
-            "The AR implementation appears to be basic and may not work reliably in all lighting conditions. The accessibility features, while mentioned, weren't demonstrated in the demo. The team size is small which might limit the scope and quality of implementation.",
-          praiseAgent:
-            "Excellent focus on accessibility and inclusive design. The AR navigation concept is innovative and addresses a real need for students. The user interface is intuitive and the demo showed good technical execution. The team clearly understands the target user base and their needs.",
-          isFavorite: false,
-        },
-        {
-          id: "submission-3",
-          projectName: "EcoTrack - Carbon Footprint Tracker",
-          description:
-            "A comprehensive platform for tracking and reducing carbon footprints with personalized recommendations and community challenges.",
-          demoLink: "https://ecotrack.green",
-          teamMembers: [
-            "Frank Miller",
-            "Grace Lee",
-            "Henry Taylor",
-            "Ivy Chen",
-          ],
-          category: "filtered",
-          overallScore: 65,
-          rubricScores: {
-            innovation: 6,
-            technicalImplementation: 7,
-            userExperience: 6,
-            problemSolving: 7,
-            presentation: 6,
-          },
-          devilsAdvocate:
-            "The concept is not particularly novel - there are many existing carbon tracking apps. The implementation seems basic and the user interface needs significant improvement. The data accuracy and methodology for carbon calculations wasn't clearly explained.",
-          praiseAgent:
-            "Good social impact focus and the community features are engaging. The team shows understanding of environmental issues and the platform has potential for positive impact. The technical implementation is solid, though could use more polish.",
-          isFavorite: false,
-        },
-        {
-          id: "submission-4",
-          projectName: "Blockchain Voting System",
-          description:
-            "A secure, transparent voting system built on blockchain technology ensuring voter anonymity while providing verifiable results.",
-          demoLink: "https://securevote.blockchain",
-          teamMembers: ["Liam O'Connor", "Maya Patel", "Noah Kim"],
-          category: "ineligible",
-          eligibilityReason:
-            "Project description is too brief (less than 500 words required). Missing demo video link. Team size exceeds maximum of 4 members.",
-          overallScore: 0,
-          rubricScores: {},
-          devilsAdvocate: "",
-          praiseAgent: "",
-          isFavorite: false,
-        },
-      ];
+        });
+      }
 
+      // Step 3: Complete
       setProcessingStatus({
         stage: "complete",
         progress: 100,
@@ -238,17 +215,11 @@ const UploadPage: React.FC = () => {
       // Create review and navigate
       const review: HackathonReview = {
         id: `hackathon-${Date.now()}`,
-        name: formData.hackathonName || "Demo Hackathon",
-        rubric: formData.rubric || "Demo rubric for evaluation",
-        requirements: formData.requirements || "Demo requirements",
-        schema: {
-          innovation: 10,
-          technicalImplementation: 10,
-          userExperience: 10,
-          problemSolving: 10,
-          presentation: 10,
-        },
-        submissions: demoSubmissions,
+        name: formData.hackathonName,
+        rubric: formData.rubric,
+        requirements: formData.requirements,
+        schema: schemaResponse.data.schema,
+        submissions: processedSubmissions,
         createdAt: new Date(),
       };
 
@@ -270,8 +241,16 @@ const UploadPage: React.FC = () => {
 
   if (isProcessing) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <div className="max-w-md w-full">
+      <div className="min-h-screen bg-dark-950 flex items-center justify-center relative overflow-hidden">
+        {/* Animated background elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500/20 rounded-full blur-3xl animate-pulse-slow"></div>
+          <div
+            className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-600/20 rounded-full blur-3xl animate-pulse-slow"
+            style={{ animationDelay: "1s" }}
+          ></div>
+        </div>
+        <div className="max-w-md w-full relative z-10">
           <LoadingSpinner status={processingStatus} />
         </div>
       </div>
