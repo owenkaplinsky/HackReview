@@ -106,26 +106,13 @@ The backend implements a **kickoff/status pattern** for handling long-running AI
 - **Input**:
   ```json
   {
-    "hackathon_rubric": "string"
+    "hackathon_rubric": string
   }
   ```
 - **Output**:
   ```json
   {
-    "success": true,
-    "data": {
-      "schema": {
-        "type": "object",
-        "properties": {
-          "innovation": { "type": "integer", "minimum": 0, "maximum": 25 },
-          "technicalImplementation": {
-            "type": "integer",
-            "minimum": 0,
-            "maximum": 30
-          }
-        }
-      }
-    }
+    "result": string
   }
   ```
 
@@ -136,18 +123,15 @@ The backend implements a **kickoff/status pattern** for handling long-running AI
 - **Input**:
   ```json
   {
-    "project_writeup": "string",
-    "hackathon_requirements": "string"
+    "project_writeup": string,
+    "hackathon_requirements": string
   }
   ```
 - **Output**:
   ```json
   {
-    "success": true,
-    "data": {
-      "eligible": true,
-      "reason": "Project meets all requirements"
-    }
+    "eligible": boolean,
+    "reason": string
   }
   ```
 
@@ -158,19 +142,17 @@ The backend implements a **kickoff/status pattern** for handling long-running AI
 - **Input**:
   ```json
   {
-    "inputs": {
-      "hackathon_rubric": "string",
-      "json_rubric": {},
-      "project_writeup": "string"
-    },
-    "taskWebhookUrl": "",
-    "stepWebhookUrl": "",
-    "crewWebhookUrl": "",
-    "trainingFilename": "",
-    "generateArtifact": false
+    "hackathon_rubric": string,
+    "json_rubric": string,
+    "project_writeup": string
   }
   ```
-- **Output**: Complex nested structure with scores, debate analysis, and recommendations
+- **Output**:
+  ```json
+  {
+    "result": string
+  }
+  ```
 
 #### 4. Kickoff Management APIs
 
