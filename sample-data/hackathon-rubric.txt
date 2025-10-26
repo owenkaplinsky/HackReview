@@ -1,0 +1,36 @@
+HACKATHON EVALUATION RUBRIC
+
+OVERALL SCORING (100 points total)
+
+1. INNOVATION & CREATIVITY (20 points)
+   - Novel approach to solving the problem (10 points)
+   - Creative use of technology (5 points)
+   - Unique features or solutions (5 points)
+
+2. TECHNICAL IMPLEMENTATION (25 points)
+   - Code quality and architecture (10 points)
+   - Use of appropriate technologies (5 points)
+   - Technical complexity and sophistication (5 points)
+   - Performance and scalability (5 points)
+
+3. USER EXPERIENCE & DESIGN (20 points)
+   - Intuitive and user-friendly interface (10 points)
+   - Visual design and aesthetics (5 points)
+   - Accessibility and usability (5 points)
+
+4. PROBLEM SOLVING & IMPACT (20 points)
+   - Addresses a real-world problem (10 points)
+   - Clear value proposition (5 points)
+   - Potential for positive impact (5 points)
+
+5. PRESENTATION & DEMO (15 points)
+   - Clear and compelling presentation (8 points)
+   - Working demo functionality (4 points)
+   - Quality of documentation (3 points)
+
+BONUS POINTS:
+- Open source contribution (+5 points)
+- Integration with external APIs (+3 points)
+- Mobile responsiveness (+2 points)
+- Accessibility features (+3 points)
+- Real-time functionality (+2 points)

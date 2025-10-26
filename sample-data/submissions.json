@@ -1,0 +1,62 @@
+[
+  {
+    "project_name": "QuickNotes AI",
+    "description": "AI note-taker for meetings using GPT-4. Automatically summarizes and organizes discussions by topic to make post-meeting workflows faster and more accurate."
+  },
+  {
+    "project_name": "Streamlit Predictor",
+    "description": "Streamlit Predictor is a data-driven web app that estimates housing prices based on square footage, number of rooms, and neighborhood trends. Built entirely with Streamlit, it demonstrates real-time regression predictions through interactive UI components. Users can adjust sliders and inputs, receive instant price feedback, and export reports for data visualization. The project includes a detailed README, a deployment guide using Streamlit Cloud, and a sample dataset sourced from open housing records."
+  },
+  {
+    "project_name": "EduPlan Assistant",
+    "description": "EduPlan Assistant is an adaptive learning platform that builds personalized education plans for students using artificial intelligence. The system integrates natural language processing models for comprehension analysis and a recommendation engine for content sequencing. Built with Python, React, and TensorFlow, it features progress dashboards, performance visualizations, and integration with existing LMS platforms. The repository includes setup instructions, test coverage details, and a walkthrough video explaining model architecture. Team has 6 members."
+  },
+  {
+    "project_name": "FantasyScore Pro",
+    "description": "FantasyScore Pro uses predictive analytics to evaluate player performance and generate optimal lineups for fantasy sports leagues. Leveraging a combination of neural networks and statistical modeling, the app produces daily ranking updates and real-time injury risk assessments. Built with Node.js, Flask, and TensorFlow, it offers a clean dashboard, public API access, and integration with third-party sports data providers. The GitHub repository includes a full documentation set and deployment scripts for containerized environments."
+  },
+  {
+    "project_name": "AI RoastBot",
+    "description": "AI RoastBot is a conversational agent designed to generate sharp, humorous roasts in real time. It uses fine-tuned large language models to analyze input context and craft witty, creative responses. Built with Python, FastAPI, and a lightweight React interface, RoastBot includes no moderation filter, chat logging, and real-time performance metrics. The project repository contains documentation, a detailed README, and deployment instructions for both local and cloud setups. We encourage inappropriate or rude activity."
+  },
+  {
+    "project_name": "AI Diet Logger",
+    "description": "AI Diet Logger is a mobile-friendly web app that estimates calories from food images using an open-source vision model. Users upload meal photos, and the system identifies ingredients and provides approximate nutritional data. Built with React and Flask, it integrates a pre-trained model from a public repository with minimal parameter tuning. The app offers a clean interface and connects to a lightweight backend for storing meal history. While the project demonstrates a working demo and functional API, the focus is mainly on integrating existing components rather than introducing new approaches."
+  },
+  {
+    "project_name": "EduQuiz Generator",
+    "description": "EduQuiz Generator helps educators create quizzes automatically from lesson text. The system uses a large language model to extract key points and generate multiple-choice questions with answer keys. Developed with Python (FastAPI) and Vue.js, it connects to OpenAI’s API for text generation. The app includes a dashboard for teachers to edit and export quizzes. Most of the project centers around wrapping API responses into a usable interface, with moderate styling and limited customization beyond basic text handling."
+  },
+  {
+    "project_name": "Sustainify Dashboard",
+    "description": "Sustainify Dashboard is a data visualization platform that aggregates public sustainability metrics from government APIs and displays them through interactive charts. Built with Node.js, D3.js, and Express, it allows users to explore indicators like carbon emissions and renewable energy usage by region. The project focuses on integrating third-party APIs and rendering existing datasets into a modern web format. The code emphasizes usability and consistent color schemes, with modest interactivity and simple data filtering."
+  },
+  {
+    "project_name": "MediBot",
+    "description": "MediBot is a conversational AI assistant that provides plain-language summaries of medical topics. It uses a fine-tuned GPT-based model and a React frontend to deliver explanations about symptoms, treatments, and conditions. Built with Flask and Socket.IO for real-time messaging, the system ensures smooth chat flow and includes a disclaimer feature for responsible use. The implementation primarily adapts existing chatbot libraries and relies heavily on pretrained medical datasets, emphasizing deployment polish over architectural novelty."
+  },
+  {
+    "project_name": "Impact Tracker",
+    "description": "Impact Tracker is a social impact monitoring tool that helps nonprofits record volunteer hours, donations, and event attendance. The system combines a Django backend with a responsive Bootstrap frontend and includes data export to CSV and PDF. The design follows standard CRUD patterns with authentication, dashboard summaries, and automated report generation. Built using established templates and extensions, the project focuses on reliability and simplicity rather than introducing new technical methods or unique user interactions."
+  },
+  {
+    "project_name": "Polyglot Sense",
+    "description": "Polyglot Sense is an adaptive multilingual AI that learns regional idioms and cultural tone to improve cross-language understanding. Unlike standard translation tools, it analyzes idiomatic expressions and context-specific sentiment, generating nuanced translations that preserve emotional intent. Built with Rust for backend concurrency and PyTorch for fine-tuning multilingual transformer layers, the system dynamically adjusts tone for audience sensitivity. Polyglot Sense also includes a Chrome extension for real-time translation within email clients and collaborative tools, using reinforcement feedback from users to continually refine phrasing accuracy. The interface prioritizes accessibility and allows non-native speakers to communicate naturally, bridging linguistic nuance rather than literal meaning."
+  },
+  {
+    "project_name": "BioRhythm Insight",
+    "description": "BioRhythm Insight uses AI-driven pattern recognition to detect early physiological stress signals from wearable sensor data, predicting burnout or illness risk before symptoms surface. Built with TensorFlow for predictive modeling and a lightweight Go backend for rapid data ingestion, the platform integrates with smartwatches to analyze micro-changes in heart rate variability, sleep cycles, and movement. The system’s adaptive learning component personalizes baselines for each user, making it distinct from one-size-fits-all health trackers. A responsive dashboard visualizes the user’s biological rhythm map and provides weekly wellness reports with personalized recovery suggestions. The model’s interpretability layer explains which biometric features influenced its predictions, promoting trust in AI-driven health insights."
+  },
+  {
+    "project_name": "TerraForge AI",
+    "description": "TerraForge AI is a sustainability simulation engine that generates optimized urban design layouts using AI-assisted resource modeling. The tool allows city planners to input constraints—such as land area, solar exposure, and waste output—and automatically proposes eco-efficient designs. Built with Python, Three.js, and a custom reinforcement learning module, it simulates long-term environmental impact by predicting energy consumption and CO₂ reduction potential. The system integrates real geospatial data from open APIs to visualize terrain and climate effects in 3D. The result is an interactive platform that helps planners experiment with sustainable architecture strategies in real time, offering both predictive analytics and immersive visualization."
+  },
+  {
+    "project_name": "NeuroSketch",
+    "description": "NeuroSketch is a generative AI platform for turning cognitive data—such as EEG brainwave patterns—into visual art. Designed for neurotherapy and education, it interprets neural signals through a transformer-based decoder that maps electrical activity to shape, color, and motion parameters. Built using PyTorch and Unity, the system allows real-time rendering of brain-inspired art forms that evolve as the subject’s mental state changes. Users can view the visualization in VR or export it as digital artwork. NeuroSketch demonstrates novel integration between neuroscience and creative media, exploring how computational perception can make mental processes visible and emotionally resonant."
+  },
+  {
+    "project_name": "EchoLearn",
+    "description": "EchoLearn is an adaptive education tool that listens to classroom discussions and automatically generates concept maps, study guides, and personalized follow-up questions for each student. Using Whisper for transcription and fine-tuned BERT embeddings for semantic clustering, it identifies key topics and learning gaps in real time. The backend, built in FastAPI with PostgreSQL, stores individualized knowledge graphs for progress tracking. EchoLearn’s interface, made in Svelte, gives teachers live feedback on participation balance and conceptual confusion. The system’s design focuses on enhancing comprehension through reflection rather than rote repetition, embodying a new form of participatory learning analytics."
+  }
+]
