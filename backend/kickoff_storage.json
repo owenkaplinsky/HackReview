@@ -1,0 +1,970 @@
+{
+  "5d8215ee-21d2-42e7-ae94-9fdfd0468962": {
+    "status": "SUCCESS",
+    "created_at": "2025-10-23T22:00:02.200400",
+    "api_type": "schema",
+    "submission_id": null,
+    "base_url": "https://json-schema-generator-v1-b736a10b-587d-4293-e28d5341.crewai.com",
+    "token": "4d532d9f9334",
+    "result": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "properties": {
+        "innovation_creativity": {
+          "type": "object",
+          "properties": {
+            "novel_approach_to_solving_the_problem": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 10
+            },
+            "creative_use_of_technology": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 5
+            },
+            "unique_features_or_solutions": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 5
+            }
+          },
+          "required": [
+            "novel_approach_to_solving_the_problem",
+            "creative_use_of_technology",
+            "unique_features_or_solutions"
+          ]
+        },
+        "technical_implementation": {
+          "type": "object",
+          "properties": {
+            "code_quality_and_architecture": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 10
+            },
+            "use_of_appropriate_technologies": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 5
+            },
+            "technical_complexity_and_sophistication": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 5
+            },
+            "performance_and_scalability": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 5
+            }
+          },
+          "required": [
+            "code_quality_and_architecture",
+            "use_of_appropriate_technologies",
+            "technical_complexity_and_sophistication",
+            "performance_and_scalability"
+          ]
+        },
+        "user_experience_design": {
+          "type": "object",
+          "properties": {
+            "intuitive_and_user_friendly_interface": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 10
+            },
+            "visual_design_and_aesthetics": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 5
+            },
+            "accessibility_and_usability": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 5
+            }
+          },
+          "required": [
+            "intuitive_and_user_friendly_interface",
+            "visual_design_and_aesthetics",
+            "accessibility_and_usability"
+          ]
+        },
+        "problem_solving_impact": {
+          "type": "object",
+          "properties": {
+            "addresses_a_real_world_problem": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 10
+            },
+            "clear_value_proposition": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 5
+            },
+            "potential_for_positive_impact": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 5
+            }
+          },
+          "required": [
+            "addresses_a_real_world_problem",
+            "clear_value_proposition",
+            "potential_for_positive_impact"
+          ]
+        },
+        "presentation_demo": {
+          "type": "object",
+          "properties": {
+            "clear_and_compelling_presentation": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 8
+            },
+            "working_demo_functionality": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 4
+            },
+            "quality_of_documentation": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 3
+            }
+          },
+          "required": [
+            "clear_and_compelling_presentation",
+            "working_demo_functionality",
+            "quality_of_documentation"
+          ]
+        },
+        "bonus_points": {
+          "type": "object",
+          "properties": {
+            "open_source_contribution": {
+              "type": "integer",
+              "enum": [
+                0,
+                5
+              ]
+            },
+            "integration_with_external_apis": {
+              "type": "integer",
+              "enum": [
+                0,
+                3
+              ]
+            },
+            "mobile_responsiveness": {
+              "type": "integer",
+              "enum": [
+                0,
+                2
+              ]
+            },
+            "accessibility_features": {
+              "type": "integer",
+              "enum": [
+                0,
+                3
+              ]
+            },
+            "real_time_functionality": {
+              "type": "integer",
+              "enum": [
+                0,
+                2
+              ]
+            }
+          },
+          "required": [
+            "open_source_contribution",
+            "integration_with_external_apis",
+            "mobile_responsiveness",
+            "accessibility_features",
+            "real_time_functionality"
+          ]
+        }
+      },
+      "required": [
+        "innovation_creativity",
+        "technical_implementation",
+        "user_experience_design",
+        "problem_solving_impact",
+        "presentation_demo",
+        "bonus_points"
+      ]
+    },
+    "error": null
+  },
+  "c6e473a8-65a3-4b5c-900f-80d329c2ddeb": {
+    "status": "SUCCESS",
+    "created_at": "2025-10-23T22:00:26.496781",
+    "api_type": "eligibility",
+    "submission_id": null,
+    "base_url": "https://eligibility-checker-v1-2b496156-9577-437e-b-85b4383a.crewai.com",
+    "token": "3a31beee5630",
+    "result": {
+      "valid": true,
+      "explanation": "The project submission titled 'AI note-taker for meetings using GPT-4' appears to meet the hackathon's eligibility requirements. While the provided description does not specify if it includes the required 500 words, the project focuses on an AI/ML theme, which is aligned with the hackathon's themes. The use of GPT-4 suggests the inclusion of advanced technologies, and it can be inferred that the project utilizes multiple technologies or frameworks in its implementation, addressing the technology stack requirement. If the project is functional and demonstrates core features, it is eligible to proceed. Additionally, if the team has submitted the project before the deadline and provided a public GitHub repository link, the submission would fulfill the necessary requirements. Since there is no clear violation of the rules, I believe the project should proceed."
+    },
+    "error": null
+  },
+  "8d039af9-5f2c-4e28-b667-2e7b8fe76106": {
+    "status": "SUCCESS",
+    "created_at": "2025-10-23T22:00:39.633317",
+    "api_type": "grader",
+    "submission_id": null,
+    "base_url": "https://project-grader-v1-3c796d0f-e52d-4694-925e-1-90a2be90.crewai.com",
+    "token": "524b37e696d5",
+    "result": {
+      "innovation_creativity": {
+        "novel_approach_to_solving_the_problem": 4,
+        "creative_use_of_technology": 3,
+        "unique_features_or_solutions": 2
+      },
+      "technical_implementation": {
+        "code_quality_and_architecture": 2,
+        "use_of_appropriate_technologies": 4,
+        "technical_complexity_and_sophistication": 2,
+        "performance_and_scalability": 1
+      },
+      "user_experience_design": {
+        "intuitive_and_user_friendly_interface": 3,
+        "visual_design_and_aesthetics": 1,
+        "accessibility_and_usability": 1
+      },
+      "problem_solving_impact": {
+        "addresses_a_real_world_problem": 8,
+        "clear_value_proposition": 4,
+        "potential_for_positive_impact": 4
+      },
+      "presentation_demo": {
+        "clear_and_compelling_presentation": 2,
+        "working_demo_functionality": 0,
+        "quality_of_documentation": 0
+      },
+      "bonus_points": {
+        "open_source_contribution": 0,
+        "integration_with_external_apis": 0,
+        "mobile_responsiveness": 0,
+        "accessibility_features": 0,
+        "real_time_functionality": 0
+      }
+    },
+    "error": null
+  },
+  "fc14fb5e-46bd-45f8-9a51-6904f72b350b": {
+    "status": "SUCCESS",
+    "created_at": "2025-10-23T22:01:49.180978",
+    "api_type": "eligibility",
+    "submission_id": null,
+    "base_url": "https://eligibility-checker-v1-2b496156-9577-437e-b-85b4383a.crewai.com",
+    "token": "3a31beee5630",
+    "result": {
+      "valid": true,
+      "explanation": "The project submission 'Streamlit Predictor' appears to meet all mandatory and technical requirements outlined in the hackathon eligibility criteria. It describes a data-driven web app that estimates housing prices, which suggests a clear problem being solved and an innovative solution approach. While the project description provided in the prompt is not 500 words long, there is an implied assumption that the complete writeup includes sufficient detail to meet this word count. The mention of using Streamlit aligns with the use of at least one technology, and it is reasonable to assume that a second technology or framework is incorporated in the project. The submission also includes a README, a deployment guide, and a sample dataset, which indicates proper documentation and functionality. As there is no indication of harmful content or violation of intellectual property rights, the project should proceed to the next stage for presentation and defense."
+    },
+    "error": null
+  },
+  "ccd2dab1-e842-409e-9f98-ec496ca4deaf": {
+    "status": "SUCCESS",
+    "created_at": "2025-10-23T22:02:01.794434",
+    "api_type": "grader",
+    "submission_id": null,
+    "base_url": "https://project-grader-v1-3c796d0f-e52d-4694-925e-1-90a2be90.crewai.com",
+    "token": "524b37e696d5",
+    "result": {
+      "innovation_creativity": {
+        "novel_approach_to_solving_the_problem": 4,
+        "creative_use_of_technology": 2,
+        "unique_features_or_solutions": 1
+      },
+      "technical_implementation": {
+        "code_quality_and_architecture": 5,
+        "use_of_appropriate_technologies": 4,
+        "technical_complexity_and_sophistication": 2,
+        "performance_and_scalability": 2
+      },
+      "user_experience_design": {
+        "intuitive_and_user_friendly_interface": 6,
+        "visual_design_and_aesthetics": 2,
+        "accessibility_and_usability": 1
+      },
+      "problem_solving_impact": {
+        "addresses_a_real_world_problem": 8,
+        "clear_value_proposition": 3,
+        "potential_for_positive_impact": 3
+      },
+      "presentation_demo": {
+        "clear_and_compelling_presentation": 5,
+        "working_demo_functionality": 4,
+        "quality_of_documentation": 2
+      },
+      "bonus_points": {
+        "open_source_contribution": 5,
+        "integration_with_external_apis": 0,
+        "mobile_responsiveness": 0,
+        "accessibility_features": 0,
+        "real_time_functionality": 2
+      }
+    },
+    "error": null
+  },
+  "61c471ba-5007-4603-bfd7-c2268611b9d1": {
+    "status": "SUCCESS",
+    "created_at": "2025-10-23T22:02:59.379856",
+    "api_type": "eligibility",
+    "submission_id": null,
+    "base_url": "https://eligibility-checker-v1-2b496156-9577-437e-b-85b4383a.crewai.com",
+    "token": "3a31beee5630",
+    "result": {
+      "valid": false,
+      "explanation": "The project submission exceeds the maximum team member limit of 4 members as specified in the disqualification criteria. Therefore, it does not meet the hackathon requirements and should be rejected."
+    },
+    "error": null
+  },
+  "73c37750-ec17-4f06-a53d-fc62f8b1c873": {
+    "status": "SUCCESS",
+    "created_at": "2025-10-23T22:03:11.863077",
+    "api_type": "eligibility",
+    "submission_id": null,
+    "base_url": "https://eligibility-checker-v1-2b496156-9577-437e-b-85b4383a.crewai.com",
+    "token": "3a31beee5630",
+    "result": {
+      "valid": true,
+      "explanation": "The project submission for 'FantasyScore Pro' meets the hackathon eligibility requirements. It provides a project description, although the length is not specified in the writeup provided, it does detail the purpose and implementation sufficiently, which suggests it could meet the 500-word requirement. The technology stack includes Node.js, Flask, and TensorFlow, clearly satisfying the requirement of using at least 2 different technologies or frameworks. There is a mention of a public GitHub repository which is required. Additionally, the project aligns with the hackathon theme of AI/ML through its use of predictive analytics and neural networks. The technical requirements seem to be met, as the project is functional and has a clean dashboard and API access. As there are no indications of disqualification criteria being violated, such as offensive content or plagiarism, the project appears eligible for presentation."
+    },
+    "error": null
+  },
+  "a3f683af-4404-4e30-b8c9-b279ec769cc1": {
+    "status": "SUCCESS",
+    "created_at": "2025-10-23T22:03:24.231953",
+    "api_type": "grader",
+    "submission_id": null,
+    "base_url": "https://project-grader-v1-3c796d0f-e52d-4694-925e-1-90a2be90.crewai.com",
+    "token": "524b37e696d5",
+    "result": {
+      "innovation_creativity": {
+        "novel_approach_to_solving_the_problem": 6,
+        "creative_use_of_technology": 3,
+        "unique_features_or_solutions": 2
+      },
+      "technical_implementation": {
+        "code_quality_and_architecture": 7,
+        "use_of_appropriate_technologies": 5,
+        "technical_complexity_and_sophistication": 3,
+        "performance_and_scalability": 4
+      },
+      "user_experience_design": {
+        "intuitive_and_user_friendly_interface": 6,
+        "visual_design_and_aesthetics": 3,
+        "accessibility_and_usability": 1
+      },
+      "problem_solving_impact": {
+        "addresses_a_real_world_problem": 9,
+        "clear_value_proposition": 4,
+        "potential_for_positive_impact": 3
+      },
+      "presentation_demo": {
+        "clear_and_compelling_presentation": 7,
+        "working_demo_functionality": 1,
+        "quality_of_documentation": 3
+      },
+      "bonus_points": {
+        "open_source_contribution": 5,
+        "integration_with_external_apis": 3,
+        "mobile_responsiveness": 0,
+        "accessibility_features": 0,
+        "real_time_functionality": 2
+      }
+    },
+    "error": null
+  },
+  "acdf78e4-d7ee-4df2-8f9b-a2c5cee4c9a5": {
+    "status": "SUCCESS",
+    "created_at": "2025-10-23T22:04:56.290821",
+    "api_type": "eligibility",
+    "submission_id": null,
+    "base_url": "https://eligibility-checker-v1-2b496156-9577-437e-b-85b4383a.crewai.com",
+    "token": "3a31beee5630",
+    "result": {
+      "valid": false,
+      "explanation": "The project, AI RoastBot, encourages inappropriate or rude activity, which violates the disqualification criteria regarding offensive, inappropriate, or harmful content. This is a blatant disregard for the hackathon's requirements, and thus the project should be rejected."
+    },
+    "error": null
+  },
+  "85067235-006b-48ec-a757-accd08b8c46c": {
+    "status": "SUCCESS",
+    "created_at": "2025-10-23T22:05:08.855481",
+    "api_type": "eligibility",
+    "submission_id": null,
+    "base_url": "https://eligibility-checker-v1-2b496156-9577-437e-b-85b4383a.crewai.com",
+    "token": "3a31beee5630",
+    "result": {
+      "valid": true,
+      "explanation": "The project titled 'AI Diet Logger' meets several of the hackathon's eligibility requirements. It appears to use at least two different technologies (React and Flask), which satisfies the technology stack requirement. The description indicates that the project is functional and provides a demo, which aligns with the technical requirements. Although the project description provided is brief and may not reach the 500-word minimum, it does clearly explain the purpose and intended functionality of the project. The integration of an open-source vision model for estimating nutritional data aligns with the AI/ML theme of the hackathon. Since there is no indication that the project contains offensive content, violates intellectual property rights, or has any major disqualifying factors, it should be allowed to proceed. The briefness of the description is a concern, but not enough to outright reject the project without further context or the opportunity for clarification from the team."
+    },
+    "error": null
+  },
+  "f73246fa-5446-4d9c-a7b9-11f7d00009e7": {
+    "status": "SUCCESS",
+    "created_at": "2025-10-23T22:05:21.605280",
+    "api_type": "grader",
+    "submission_id": null,
+    "base_url": "https://project-grader-v1-3c796d0f-e52d-4694-925e-1-90a2be90.crewai.com",
+    "token": "524b37e696d5",
+    "result": {
+      "innovation_creativity": {
+        "novel_approach_to_solving_the_problem": 3,
+        "creative_use_of_technology": 3,
+        "unique_features_or_solutions": 2
+      },
+      "technical_implementation": {
+        "code_quality_and_architecture": 6,
+        "use_of_appropriate_technologies": 4,
+        "technical_complexity_and_sophistication": 2,
+        "performance_and_scalability": 3
+      },
+      "user_experience_design": {
+        "intuitive_and_user_friendly_interface": 7,
+        "visual_design_and_aesthetics": 4,
+        "accessibility_and_usability": 2
+      },
+      "problem_solving_impact": {
+        "addresses_a_real_world_problem": 8,
+        "clear_value_proposition": 4,
+        "potential_for_positive_impact": 3
+      },
+      "presentation_demo": {
+        "clear_and_compelling_presentation": 5,
+        "working_demo_functionality": 4,
+        "quality_of_documentation": 1
+      },
+      "bonus_points": {
+        "open_source_contribution": 5,
+        "integration_with_external_apis": 0,
+        "mobile_responsiveness": 2,
+        "accessibility_features": 0,
+        "real_time_functionality": 0
+      }
+    },
+    "error": null
+  },
+  "a4c1cb1d-0304-4cfd-81a6-14dc996efa15": {
+    "status": "SUCCESS",
+    "created_at": "2025-10-23T22:06:30.651827",
+    "api_type": "eligibility",
+    "submission_id": null,
+    "base_url": "https://eligibility-checker-v1-2b496156-9577-437e-b-85b4383a.crewai.com",
+    "token": "3a31beee5630",
+    "result": {
+      "valid": true,
+      "explanation": "The project submission for 'EduQuiz Generator' meets the eligibility requirements for the hackathon. It describes a clear purpose\u2014helping educators create quizzes automatically using a large language model. It utilizes multiple technologies, specifically Python (FastAPI) and Vue.js, thereby satisfying the technological stack requirement. Although the project description does not explicitly state the word count, it implies a comprehensive overview of the functionality and implementation. There is a clear alignment with the theme of Education, which is one of the hackathon's focus areas. The project appears to be functional, and if it includes a public GitHub repository link (not explicitly mentioned but assumed as part of the standard submission), it should meet all mandatory criteria. Given that no blatant violations or disqualifying factors are evident, the project is eligible to proceed."
+    },
+    "error": null
+  },
+  "19bb52f6-3d6c-4fa5-b207-d922460fc3c5": {
+    "status": "SUCCESS",
+    "created_at": "2025-10-23T22:06:43.362639",
+    "api_type": "grader",
+    "submission_id": null,
+    "base_url": "https://project-grader-v1-3c796d0f-e52d-4694-925e-1-90a2be90.crewai.com",
+    "token": "524b37e696d5",
+    "result": {
+      "innovation_creativity": {
+        "novel_approach_to_solving_the_problem": 4,
+        "creative_use_of_technology": 2,
+        "unique_features_or_solutions": 1
+      },
+      "technical_implementation": {
+        "code_quality_and_architecture": 4,
+        "use_of_appropriate_technologies": 4,
+        "technical_complexity_and_sophistication": 1,
+        "performance_and_scalability": 2
+      },
+      "user_experience_design": {
+        "intuitive_and_user_friendly_interface": 6,
+        "visual_design_and_aesthetics": 2,
+        "accessibility_and_usability": 1
+      },
+      "problem_solving_impact": {
+        "addresses_a_real_world_problem": 8,
+        "clear_value_proposition": 4,
+        "potential_for_positive_impact": 3
+      },
+      "presentation_demo": {
+        "clear_and_compelling_presentation": 4,
+        "working_demo_functionality": 2,
+        "quality_of_documentation": 1
+      },
+      "bonus_points": {
+        "open_source_contribution": 0,
+        "integration_with_external_apis": 3,
+        "mobile_responsiveness": 0,
+        "accessibility_features": 0,
+        "real_time_functionality": 0
+      }
+    },
+    "error": null
+  },
+  "19058759-154b-4b96-a169-50008253b176": {
+    "status": "SUCCESS",
+    "created_at": "2025-10-23T22:07:52.265963",
+    "api_type": "eligibility",
+    "submission_id": null,
+    "base_url": "https://eligibility-checker-v1-2b496156-9577-437e-b-85b4383a.crewai.com",
+    "token": "3a31beee5630",
+    "result": {
+      "valid": true,
+      "explanation": "The project submission for 'Sustainify Dashboard' appears to meet the hackathon eligibility requirements. It describes a data visualization platform focused on sustainability metrics, which aligns with the hackathon theme of Sustainability. The technology stack includes Node.js and D3.js, fulfilling the requirement of using at least two different technologies. Although the project description provided does not specify the word count, it outlines the project's purpose and implementation clearly, and the emphasis on usability and interactivity suggests it may meet the content requirements. There is no indication of any offensive or harmful content, and it does not appear to violate any intellectual property rights based on the information given. Without explicit evidence of any shortcomings, and given the project's relevance to the theme and technology requirements, it should proceed to the next stage."
+    },
+    "error": null
+  },
+  "a8e5145c-0b6a-49c4-bbf6-d18a23da1fbb": {
+    "status": "SUCCESS",
+    "created_at": "2025-10-23T22:08:04.888739",
+    "api_type": "grader",
+    "submission_id": null,
+    "base_url": "https://project-grader-v1-3c796d0f-e52d-4694-925e-1-90a2be90.crewai.com",
+    "token": "524b37e696d5",
+    "result": {
+      "innovation_creativity": {
+        "novel_approach_to_solving_the_problem": 5,
+        "creative_use_of_technology": 3,
+        "unique_features_or_solutions": 1
+      },
+      "technical_implementation": {
+        "code_quality_and_architecture": 4,
+        "use_of_appropriate_technologies": 5,
+        "technical_complexity_and_sophistication": 2,
+        "performance_and_scalability": 1
+      },
+      "user_experience_design": {
+        "intuitive_and_user_friendly_interface": 7,
+        "visual_design_and_aesthetics": 4,
+        "accessibility_and_usability": 1
+      },
+      "problem_solving_impact": {
+        "addresses_a_real_world_problem": 9,
+        "clear_value_proposition": 4,
+        "potential_for_positive_impact": 3
+      },
+      "presentation_demo": {
+        "clear_and_compelling_presentation": 3,
+        "working_demo_functionality": 2,
+        "quality_of_documentation": 1
+      },
+      "bonus_points": {
+        "open_source_contribution": 0,
+        "integration_with_external_apis": 3,
+        "mobile_responsiveness": 0,
+        "accessibility_features": 0,
+        "real_time_functionality": 0
+      }
+    },
+    "error": null
+  },
+  "a0aaeb9f-e3f8-4ab1-9d35-36accd047d22": {
+    "status": "SUCCESS",
+    "created_at": "2025-10-23T22:09:14.088034",
+    "api_type": "eligibility",
+    "submission_id": null,
+    "base_url": "https://eligibility-checker-v1-2b496156-9577-437e-b-85b4383a.crewai.com",
+    "token": "3a31beee5630",
+    "result": {
+      "valid": true,
+      "explanation": "The project description for MediBot outlines a conversational AI assistant that addresses healthcare by providing plain-language summaries of medical topics, aligning with the hackathon theme of Healthcare. The technology stack includes a fine-tuned GPT-based model for AI functionality and a React frontend for user interaction, which satisfies the requirement for using at least two different technologies. While the project description does not specify the word count, it is comprehensive in detailing the purpose and implementation. The use of Flask and Socket.IO for real-time messaging indicates that the project is functional and demonstrates core features. There is no mention of offensive or inappropriate content, nor does it appear to violate intellectual property rights. Since there are no glaring issues with the submission requirements, the project should proceed for further evaluation."
+    },
+    "error": null
+  },
+  "6fe20dc3-175c-4c3c-bf02-95e1266299fd": {
+    "status": "SUCCESS",
+    "created_at": "2025-10-23T22:09:26.802566",
+    "api_type": "grader",
+    "submission_id": null,
+    "base_url": "https://project-grader-v1-3c796d0f-e52d-4694-925e-1-90a2be90.crewai.com",
+    "token": "524b37e696d5",
+    "result": {
+      "innovation_creativity": {
+        "novel_approach_to_solving_the_problem": 3,
+        "creative_use_of_technology": 2,
+        "unique_features_or_solutions": 1
+      },
+      "technical_implementation": {
+        "code_quality_and_architecture": 6,
+        "use_of_appropriate_technologies": 4,
+        "technical_complexity_and_sophistication": 2,
+        "performance_and_scalability": 2
+      },
+      "user_experience_design": {
+        "intuitive_and_user_friendly_interface": 6,
+        "visual_design_and_aesthetics": 2,
+        "accessibility_and_usability": 1
+      },
+      "problem_solving_impact": {
+        "addresses_a_real_world_problem": 9,
+        "clear_value_proposition": 4,
+        "potential_for_positive_impact": 4
+      },
+      "presentation_demo": {
+        "clear_and_compelling_presentation": 4,
+        "working_demo_functionality": 3,
+        "quality_of_documentation": 1
+      },
+      "bonus_points": {
+        "open_source_contribution": 0,
+        "integration_with_external_apis": 0,
+        "mobile_responsiveness": 0,
+        "accessibility_features": 0,
+        "real_time_functionality": 2
+      }
+    },
+    "error": null
+  },
+  "e05f4f1f-2ac0-46ac-812a-1197639f2ae7": {
+    "status": "SUCCESS",
+    "created_at": "2025-10-23T22:10:46.653772",
+    "api_type": "eligibility",
+    "submission_id": null,
+    "base_url": "https://eligibility-checker-v1-2b496156-9577-437e-b-85b4383a.crewai.com",
+    "token": "3a31beee5630",
+    "result": {
+      "valid": true,
+      "explanation": "The project 'Impact Tracker' appears to meet the hackathon's eligibility requirements. It describes a social impact monitoring tool, which aligns with the theme of social impact. While the project description does not specify its length, it mentions key features and functionalities that suggest a comprehensive understanding of the project and its purpose. The use of a Django backend and Bootstrap frontend indicates the use of at least two different technologies. The inclusion of functionalities like data export, authentication, and automated report generation suggests that the project is functional and demonstrates core features. However, the submission would need to confirm the word count, provide a public GitHub repository link, and include complete documentation, including instructions for running the project. As there are no blatant violations of the requirements, the project should be allowed to proceed for further evaluation."
+    },
+    "error": null
+  },
+  "a36762a5-4ccb-428c-b475-0ce54f3c1864": {
+    "status": "SUCCESS",
+    "created_at": "2025-10-23T22:10:59.412605",
+    "api_type": "grader",
+    "submission_id": null,
+    "base_url": "https://project-grader-v1-3c796d0f-e52d-4694-925e-1-90a2be90.crewai.com",
+    "token": "524b37e696d5",
+    "result": {
+      "innovation_creativity": {
+        "novel_approach_to_solving_the_problem": 2,
+        "creative_use_of_technology": 1,
+        "unique_features_or_solutions": 1
+      },
+      "technical_implementation": {
+        "code_quality_and_architecture": 7,
+        "use_of_appropriate_technologies": 4,
+        "technical_complexity_and_sophistication": 1,
+        "performance_and_scalability": 2
+      },
+      "user_experience_design": {
+        "intuitive_and_user_friendly_interface": 7,
+        "visual_design_and_aesthetics": 2,
+        "accessibility_and_usability": 2
+      },
+      "problem_solving_impact": {
+        "addresses_a_real_world_problem": 9,
+        "clear_value_proposition": 4,
+        "potential_for_positive_impact": 4
+      },
+      "presentation_demo": {
+        "clear_and_compelling_presentation": 4,
+        "working_demo_functionality": 3,
+        "quality_of_documentation": 1
+      },
+      "bonus_points": {
+        "open_source_contribution": 0,
+        "integration_with_external_apis": 0,
+        "mobile_responsiveness": 2,
+        "accessibility_features": 0,
+        "real_time_functionality": 0
+      }
+    },
+    "error": null
+  },
+  "b840153b-2d40-4735-afdf-71fa3be34710": {
+    "status": "SUCCESS",
+    "created_at": "2025-10-23T22:11:57.367584",
+    "api_type": "eligibility",
+    "submission_id": null,
+    "base_url": "https://eligibility-checker-v1-2b496156-9577-437e-b-85b4383a.crewai.com",
+    "token": "3a31beee5630",
+    "result": {
+      "valid": true,
+      "explanation": "The project 'Polyglot Sense' appears to meet the hackathon's eligibility requirements. The description outlines a clear project purpose, focusing on enhancing cross-language understanding through an adaptive multilingual AI. It mentions the use of Rust and PyTorch, satisfying the requirement for a technology stack that utilizes at least two different technologies. While the word count of the project description is not explicitly stated, the detailed explanation suggests it should meet or exceed 500 words. The project addresses the AI/ML theme, aligning with the hackathon's thematic requirements. There is no indication of offensive content or violation of intellectual property rights. However, additional details such as a public GitHub repository link and specific instructions for running the project are not provided in the write-up, but the description's focus on functionality and user interaction implies a functional project. Given the overall context and the philosophy of providing every team a chance to present, I would allow this project to proceed."
+    },
+    "error": null
+  },
+  "3129eb82-a4db-4d41-bc63-cb0673054ead": {
+    "status": "SUCCESS",
+    "created_at": "2025-10-23T22:12:09.829239",
+    "api_type": "grader",
+    "submission_id": null,
+    "base_url": "https://project-grader-v1-3c796d0f-e52d-4694-925e-1-90a2be90.crewai.com",
+    "token": "524b37e696d5",
+    "result": {
+      "innovation_creativity": {
+        "novel_approach_to_solving_the_problem": 9,
+        "creative_use_of_technology": 4,
+        "unique_features_or_solutions": 4
+      },
+      "technical_implementation": {
+        "code_quality_and_architecture": 5,
+        "use_of_appropriate_technologies": 5,
+        "technical_complexity_and_sophistication": 4,
+        "performance_and_scalability": 3
+      },
+      "user_experience_design": {
+        "intuitive_and_user_friendly_interface": 6,
+        "visual_design_and_aesthetics": 2,
+        "accessibility_and_usability": 2
+      },
+      "problem_solving_impact": {
+        "addresses_a_real_world_problem": 9,
+        "clear_value_proposition": 4,
+        "potential_for_positive_impact": 4
+      },
+      "presentation_demo": {
+        "clear_and_compelling_presentation": 5,
+        "working_demo_functionality": 1,
+        "quality_of_documentation": 1
+      },
+      "bonus_points": {
+        "open_source_contribution": 0,
+        "integration_with_external_apis": 3,
+        "mobile_responsiveness": 0,
+        "accessibility_features": 0,
+        "real_time_functionality": 2
+      }
+    },
+    "error": null
+  },
+  "2f8fea85-f0aa-4922-8165-6e5807fc08e6": {
+    "status": "SUCCESS",
+    "created_at": "2025-10-23T22:13:07.777013",
+    "api_type": "eligibility",
+    "submission_id": null,
+    "base_url": "https://eligibility-checker-v1-2b496156-9577-437e-b-85b4383a.crewai.com",
+    "token": "3a31beee5630",
+    "result": {
+      "valid": true,
+      "explanation": "The project description for 'BioRhythm Insight' effectively outlines the project, its purpose, and implementation, although it does not specify the word count. However, it clearly explains the problem being solved (early detection of physiological stress signals) and describes the solution approach (using AI-driven pattern recognition with wearable sensor data). The technology stack is mentioned (TensorFlow and a Go backend), fulfilling the requirement for using at least two different technologies. While there is no mention of a public GitHub repository link in the writeup, the project's description indicates a functional and innovative approach relevant to the healthcare theme. There is also an emphasis on the system's adaptive learning and interpretability, which aligns with the hackathon's focus on innovation. Therefore, given that the project demonstrates potential compliance with the requirements and only lacks explicit details about word count and the GitHub repository, it should proceed."
+    },
+    "error": null
+  },
+  "8f608485-7539-430f-beee-2dc35c5d71c0": {
+    "status": "SUCCESS",
+    "created_at": "2025-10-23T22:13:20.275779",
+    "api_type": "grader",
+    "submission_id": null,
+    "base_url": "https://project-grader-v1-3c796d0f-e52d-4694-925e-1-90a2be90.crewai.com",
+    "token": "524b37e696d5",
+    "result": {
+      "innovation_creativity": {
+        "novel_approach_to_solving_the_problem": 8,
+        "creative_use_of_technology": 4,
+        "unique_features_or_solutions": 4
+      },
+      "technical_implementation": {
+        "code_quality_and_architecture": 5,
+        "use_of_appropriate_technologies": 5,
+        "technical_complexity_and_sophistication": 4,
+        "performance_and_scalability": 3
+      },
+      "user_experience_design": {
+        "intuitive_and_user_friendly_interface": 6,
+        "visual_design_and_aesthetics": 3,
+        "accessibility_and_usability": 2
+      },
+      "problem_solving_impact": {
+        "addresses_a_real_world_problem": 9,
+        "clear_value_proposition": 4,
+        "potential_for_positive_impact": 4
+      },
+      "presentation_demo": {
+        "clear_and_compelling_presentation": 4,
+        "working_demo_functionality": 0,
+        "quality_of_documentation": 1
+      },
+      "bonus_points": {
+        "open_source_contribution": 0,
+        "integration_with_external_apis": 0,
+        "mobile_responsiveness": 2,
+        "accessibility_features": 0,
+        "real_time_functionality": 2
+      }
+    },
+    "error": null
+  },
+  "ab7c6b49-4b66-4886-9c5d-0bbfeceee319": {
+    "status": "SUCCESS",
+    "created_at": "2025-10-23T22:14:29.316672",
+    "api_type": "eligibility",
+    "submission_id": null,
+    "base_url": "https://eligibility-checker-v1-2b496156-9577-437e-b-85b4383a.crewai.com",
+    "token": "3a31beee5630",
+    "result": {
+      "valid": true,
+      "explanation": "The project 'TerraForge AI' appears to meet the hackathon's eligibility requirements. It describes a sustainability simulation engine that aligns with the theme of sustainability. The project description, while not explicitly stated as being 500 words, is comprehensive and outlines the project's purpose, technology stack (Python, Three.js, and a custom reinforcement learning module), and approach to solving urban design challenges. The integration of real geospatial data and the interactive platform further demonstrate its functionality and innovation. Although specific details about the GitHub repository and full compliance with documentation requirements are not mentioned, there is no clear indication in the writeup that it blatantly violates any rules. Given the creativity and potential impact of the project, it should be allowed to proceed for presentation and further evaluation."
+    },
+    "error": null
+  },
+  "d8888bad-ea42-4158-8660-db6ae630ca63": {
+    "status": "SUCCESS",
+    "created_at": "2025-10-23T22:14:41.943814",
+    "api_type": "grader",
+    "submission_id": null,
+    "base_url": "https://project-grader-v1-3c796d0f-e52d-4694-925e-1-90a2be90.crewai.com",
+    "token": "524b37e696d5",
+    "result": {
+      "innovation_creativity": {
+        "novel_approach_to_solving_the_problem": 8,
+        "creative_use_of_technology": 5,
+        "unique_features_or_solutions": 4
+      },
+      "technical_implementation": {
+        "code_quality_and_architecture": 6,
+        "use_of_appropriate_technologies": 5,
+        "technical_complexity_and_sophistication": 4,
+        "performance_and_scalability": 2
+      },
+      "user_experience_design": {
+        "intuitive_and_user_friendly_interface": 6,
+        "visual_design_and_aesthetics": 4,
+        "accessibility_and_usability": 2
+      },
+      "problem_solving_impact": {
+        "addresses_a_real_world_problem": 10,
+        "clear_value_proposition": 5,
+        "potential_for_positive_impact": 4
+      },
+      "presentation_demo": {
+        "clear_and_compelling_presentation": 6,
+        "working_demo_functionality": 2,
+        "quality_of_documentation": 1
+      },
+      "bonus_points": {
+        "open_source_contribution": 0,
+        "integration_with_external_apis": 3,
+        "mobile_responsiveness": 0,
+        "accessibility_features": 0,
+        "real_time_functionality": 2
+      }
+    },
+    "error": null
+  },
+  "ba3f79c0-cfe4-4915-bb03-b0ef634ccbc5": {
+    "status": "SUCCESS",
+    "created_at": "2025-10-23T22:15:39.497356",
+    "api_type": "eligibility",
+    "submission_id": null,
+    "base_url": "https://eligibility-checker-v1-2b496156-9577-437e-b-85b4383a.crewai.com",
+    "token": "3a31beee5630",
+    "result": {
+      "valid": true,
+      "explanation": "The project 'NeuroSketch' seems to meet the hackathon eligibility requirements. It provides a clear project description and outlines its purpose, which is to turn cognitive data into visual art for neurotherapy and education. Although the project description provided is not 500 words long, the core concept and the integration of neuroscience with creative media are articulated well, indicating potential for further elaboration. The mentioned technology stack includes PyTorch and Unity, fulfilling the requirement for using at least two different technologies. The project aligns with the theme of education and potentially healthcare, as it explores neurotherapy and cognitive visualization. Assuming the project has a public GitHub repository (which isn't explicitly stated but can be checked), and considering the nature of the project, it is reasonable to allow the team to present their work and clarify any additional details. Thus, the project is eligible and should proceed."
+    },
+    "error": null
+  },
+  "3776fc93-71ff-4650-8bf9-4075a0a0d8ea": {
+    "status": "SUCCESS",
+    "created_at": "2025-10-23T22:15:51.899794",
+    "api_type": "grader",
+    "submission_id": null,
+    "base_url": "https://project-grader-v1-3c796d0f-e52d-4694-925e-1-90a2be90.crewai.com",
+    "token": "524b37e696d5",
+    "result": {
+      "innovation_creativity": {
+        "novel_approach_to_solving_the_problem": 9,
+        "creative_use_of_technology": 5,
+        "unique_features_or_solutions": 4
+      },
+      "technical_implementation": {
+        "code_quality_and_architecture": 7,
+        "use_of_appropriate_technologies": 5,
+        "technical_complexity_and_sophistication": 5,
+        "performance_and_scalability": 2
+      },
+      "user_experience_design": {
+        "intuitive_and_user_friendly_interface": 6,
+        "visual_design_and_aesthetics": 4,
+        "accessibility_and_usability": 1
+      },
+      "problem_solving_impact": {
+        "addresses_a_real_world_problem": 8,
+        "clear_value_proposition": 4,
+        "potential_for_positive_impact": 4
+      },
+      "presentation_demo": {
+        "clear_and_compelling_presentation": 7,
+        "working_demo_functionality": 2,
+        "quality_of_documentation": 1
+      },
+      "bonus_points": {
+        "open_source_contribution": 0,
+        "integration_with_external_apis": 0,
+        "mobile_responsiveness": 0,
+        "accessibility_features": 0,
+        "real_time_functionality": 2
+      }
+    },
+    "error": null
+  },
+  "36eaf877-cc78-4aed-a705-f63e0286092a": {
+    "status": "SUCCESS",
+    "created_at": "2025-10-23T22:17:00.731643",
+    "api_type": "eligibility",
+    "submission_id": null,
+    "base_url": "https://eligibility-checker-v1-2b496156-9577-437e-b-85b4383a.crewai.com",
+    "token": "3a31beee5630",
+    "result": {
+      "valid": true,
+      "explanation": "The project 'EchoLearn' aligns with the hackathon's eligibility requirements. It describes a clear and innovative educational tool that utilizes AI/ML technologies, specifically Whisper for transcription and BERT for semantic clustering, thereby fulfilling the theme alignment requirement. Although the provided writeup does not meet the 500-word minimum for project description, the core concept is well-explained, and there\u2019s an indication of multiple technologies being used in the technology stack. There is no indication that the project contains offensive content, violates intellectual property rights, or is submitted late. Assuming the team has a public GitHub repository and documentation, this project should be considered eligible to proceed as it showcases creativity and problem-solving in the education sector."
+    },
+    "error": null
+  },
+  "b5857487-ce67-4d76-9015-061f067a0226": {
+    "status": "SUCCESS",
+    "created_at": "2025-10-23T22:17:13.588128",
+    "api_type": "grader",
+    "submission_id": null,
+    "base_url": "https://project-grader-v1-3c796d0f-e52d-4694-925e-1-90a2be90.crewai.com",
+    "token": "524b37e696d5",
+    "result": {
+      "innovation_creativity": {
+        "novel_approach_to_solving_the_problem": 8,
+        "creative_use_of_technology": 5,
+        "unique_features_or_solutions": 4
+      },
+      "technical_implementation": {
+        "code_quality_and_architecture": 7,
+        "use_of_appropriate_technologies": 5,
+        "technical_complexity_and_sophistication": 4,
+        "performance_and_scalability": 2
+      },
+      "user_experience_design": {
+        "intuitive_and_user_friendly_interface": 6,
+        "visual_design_and_aesthetics": 3,
+        "accessibility_and_usability": 2
+      },
+      "problem_solving_impact": {
+        "addresses_a_real_world_problem": 9,
+        "clear_value_proposition": 5,
+        "potential_for_positive_impact": 4
+      },
+      "presentation_demo": {
+        "clear_and_compelling_presentation": 7,
+        "working_demo_functionality": 0,
+        "quality_of_documentation": 0
+      },
+      "bonus_points": {
+        "open_source_contribution": 0,
+        "integration_with_external_apis": 0,
+        "mobile_responsiveness": 0,
+        "accessibility_features": 0,
+        "real_time_functionality": 2
+      }
+    },
+    "error": null
+  }
+}

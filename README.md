@@ -137,10 +137,7 @@ The backend implements a **kickoff/status pattern** for handling long-running AI
   ```json
   {
     "project_writeup": "string",
-    "hackathon_requirements": "string",
-    "team_members": ["string"],
-    "demo_link": "string",
-    "project_name": "string"
+    "hackathon_requirements": "string"
   }
   ```
 - **Output**:
